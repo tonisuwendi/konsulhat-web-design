@@ -1,0 +1,682 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+div.clearfix {
+  clear: both;
+}
+
+nav {
+  height: 65px;
+  width: 100%;
+  z-index: 1;
+  background-color: #00878a;
+  position: fixed;
+  top: -100px;
+  z-index: 101;
+  transition: 0.2s;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav img.logo {
+  width: 180px;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-left: 100px;
+}
+
+nav div.menu {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+nav div.menu a {
+  font-family: "Rubik-Regular";
+  text-decoration: none;
+  color: white;
+  position: relative;
+  font-size: 16px;
+  margin: 15px;
+  padding: 10px 0;
+}
+
+nav div.menu a.item::before {
+  background-color: white;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  transition: width 200ms;
+  width: 0;
+}
+
+nav div.menu a.item:hover::before {
+  width: 70%;
+}
+
+nav div.menu a.join {
+  border: 2px solid white;
+  font-size: 15px;
+  padding: 10px 13px;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+
+nav div.menu a.join:hover {
+  background-color: #555555;
+}
+
+div.banner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(to right, #00878a, #02bdcc);
+}
+
+div.banner div.nav {
+  height: 100px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+div.banner div.nav img.logo {
+  width: 180px;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-left: 100px;
+}
+
+div.banner div.nav div.menu {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+div.banner div.nav div.menu a {
+  font-family: "Rubik-Regular";
+  text-decoration: none;
+  color: white;
+  position: relative;
+  font-size: 16px;
+  margin: 15px;
+  padding: 10px 0;
+}
+
+div.banner div.nav div.menu a.item::before {
+  background-color: white;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  transition: width 200ms;
+  width: 0;
+}
+
+div.banner div.nav div.menu a.item:hover::before {
+  width: 70%;
+}
+
+div.banner div.nav div.menu a.join {
+  border: 2px solid white;
+  font-size: 15px;
+  padding: 10px 13px;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+
+div.banner div.nav div.menu a.join:hover {
+  background-color: #555555;
+}
+
+div.banner div.main {
+  width: 100%;
+  height: calc(100% - 100px);
+  position: relative;
+}
+
+div.banner div.main div.left {
+  width: 50%;
+  position: relative;
+  float: left;
+  height: 100%;
+}
+
+div.banner div.main div.left div.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  padding: 0 150px;
+  padding-right: 50px;
+}
+
+div.banner div.main div.left div.text h2 {
+  color: white;
+  font-size: 32px;
+  font-family: "Montserrat-Bold";
+}
+
+div.banner div.main div.left div.text p {
+  font-size: 16px;
+  font-family: "OpenSans-Regular";
+  color: #eeeeee;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+div.banner div.main div.left div.text a {
+  padding: 10px 12px;
+  border: 2px solid white;
+  border-radius: 3px;
+  font-size: 14px;
+  font-family: "OpenSans-Regular";
+  color: #eeeeee;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+div.banner div.main div.left div.text a:hover {
+  background-color: #333333;
+}
+
+div.banner div.main div.right {
+  width: 50%;
+  position: relative;
+  float: right;
+  height: 100%;
+}
+
+div.banner div.main div.right img {
+  width: 550px;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translate(-50%, -60%);
+}
+
+div.banner div.main div.right img.sinar {
+  animation: hideShow 10s infinite linear;
+}
+
+div.banner div.main div.right img.plus {
+  animation: translate 7s infinite linear;
+  margin-left: 20px;
+}
+
+div.banner div.main div.right img.plus-2 {
+  animation: translate 7s infinite linear;
+  animation-delay: 4.5s;
+  margin-left: -20px;
+  opacity: 0;
+}
+
+@keyframes hideShow {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 100%;
+  }
+  40% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 100%;
+  }
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes translate {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 100%;
+  }
+  80% {
+    transform: translate(-50%, -60%);
+    opacity: 100%;
+  }
+  90% {
+    transform: translate(-50%, -63%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+div.about {
+  background-image: url(../img/text-about.png);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 800px;
+  width: 100%;
+  height: auto;
+  margin-top: 70px;
+}
+
+div.about div.line {
+  height: 2px;
+  background-color: #00878a;
+  width: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: relative;
+  border-radius: 10px;
+}
+
+div.about h2.title {
+  font-family: "Nunito-Bold";
+  font-size: 35px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+div.about div.main {
+  height: 600px;
+  position: relative;
+  width: 100%;
+}
+
+div.about div.main div.left {
+  width: 50%;
+  float: left;
+  position: relative;
+  height: 100%;
+}
+
+div.about div.main div.left img {
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.about div.main div.left img.bg-dot {
+  left: 140px;
+  width: 150px;
+  bottom: -60px;
+  top: auto;
+}
+
+div.about div.main div.right {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  float: right;
+}
+
+div.about div.main div.right div.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  width: 80%;
+}
+
+div.about div.main div.right div.text h2.sub-title {
+  font-size: 30px;
+  color: #222;
+  font-family: "OpenSans-Bold";
+}
+
+div.about div.main div.right div.text div.line {
+  left: 0;
+  position: relative;
+  transform: translate(0, 0);
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+div.about div.main div.right div.text p {
+  margin-top: 20px;
+  font-size: 17px;
+  font-family: "Rubik-Regular";
+  color: #444444;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+div.about div.main div.right div.text a {
+  padding: 13px 30px;
+  background-color: #00878a;
+  color: white;
+  border-radius: 3px;
+  font-size: 15px;
+  font-family: "Rubik-Regular";
+  text-decoration: none;
+}
+
+div.about div.main div.right div.text span {
+  transition: 0.2s;
+}
+
+div.about div.main div.right div.text span:hover {
+  transform: translate(0, -3px);
+}
+
+div.about div.main div.right div.text a:hover {
+  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.2);
+}
+
+div.services {
+  background-color: #f7f8fe;
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+div.how-to {
+  height: auto;
+  width: 1100px;
+  position: relative;
+  margin: auto;
+}
+
+div.how-to div.line {
+  height: 2px;
+  background-color: #00878a;
+  border-radius: 10px;
+  width: 80px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 10px;
+}
+
+div.how-to h2 {
+  font-family: "Nunito-Bold";
+  font-size: 35px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+div.how-to p {
+  font-size: 16px;
+  color: #555555;
+  font-family: "OpenSans-Regular";
+  margin-top: 15px;
+  line-height: 20px;
+  width: 400px;
+  font-size: 14.5px;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: relative;
+  margin-bottom: 30px;
+}
+
+div.how-to div.list {
+  width: 330px;
+  height: auto;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  float: left;
+  margin: 18px;
+  border-radius: 5px;
+  padding: 20px 25px;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+div.how-to div.list:hover {
+  border: 1px solid #00878a;
+  transform: translate(0, -3px);
+  box-shadow: 0px 20px 25px -20px rgba(0, 0, 0, 0.4);
+}
+
+div.how-to div.list img {
+  width: 220px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: relative;
+}
+
+div.how-to div.list h2 {
+  font-size: 22px;
+}
+
+div.how-to div.list p {
+  width: 100%;
+  text-align: justify;
+  line-height: 23px;
+}
+
+div.drug {
+  width: 1100px;
+  height: auto;
+  margin: auto;
+  position: relative;
+  margin-top: 70px;
+}
+
+div.drug div.left {
+  height: 320px;
+  width: 250px;
+  float: left;
+  position: relative;
+}
+
+div.drug div.left div.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+}
+
+div.drug div.left div.text div.line {
+  height: 2px;
+  background-color: #00878a;
+  width: 80px;
+  position: relative;
+  border-radius: 10px;
+}
+
+div.drug div.left div.text h2 {
+  font-size: 28px;
+  font-family: "Montserrat-Bold";
+  margin-top: 20px;
+  line-height: 40px;
+  color: #444444;
+}
+
+div.drug div.left div.text button {
+  padding: 15px 30px;
+  background-color: #00878a;
+  color: white;
+  border-radius: 3px;
+  font-size: 14.5px;
+  font-family: "Rubik-Regular";
+  text-decoration: none;
+  margin-top: 15px;
+  border: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+div.drug div.left div.text button:hover {
+  transform: translate(0, -3px);
+  box-shadow: 0 20px 30px -20px rgba(0, 0, 0, 0.7);
+}
+
+div.drug div.right {
+  width: calc(100% - 250px);
+  height: auto;
+  float: right;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+div.drug div.right button {
+  width: 243px;
+  border: 1px solid #cccccc;
+  margin: 12px;
+  height: 70px;
+  background-color: white;
+  font-size: 16px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: "OpenSans-Regular";
+  transition: 0.2s;
+}
+
+div.drug div.right button:hover {
+  border: 1px solid #00878a;
+  transform: translate(0, -3px);
+  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.2);
+}
+
+div.pricing {
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+div.pricing div.top {
+  width: 100%;
+  height: 250px;
+  /* background: linear-gradient(to left, #02bdcc, #00878a); */
+  padding-top: 30px;
+  background-color: #0f0e20;
+}
+
+div.pricing div.line {
+  height: 2px;
+  background-color: white;
+  width: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: relative;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+div.pricing h2.title {
+  font-size: 35px;
+  font-family: "Nunito-Bold";
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+}
+
+div.pricing p.sub {
+  font-size: 16px;
+  color: #eeeeee;
+  font-family: "OpenSans-Regular";
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+div.pricing div.main {
+  width: 1100px;
+  position: relative;
+  margin: auto;
+  margin-top: -100px;
+}
+
+div.pricing div.list {
+  width: 336px;
+  height: 400px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  float: left;
+  padding: 30px;
+  position: relative;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: white;
+  transition: 0.2s;
+}
+
+div.pricing div.list:hover {
+  /* transform: translate(0, -3px); */
+  box-shadow: 0 20px 30px -20px rgba(0, 0, 0, 0.4);
+}
+
+div.pricing div.list img {
+  margin-top: 20px;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, 0);
+  width: 80%;
+}
+
+div.pricing div.list h3.title {
+  color: #222222;
+  font-family: "Montserrat-Bold";
+  font-size: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+div.pricing div.list p.desc {
+  color: #444;
+  font-family: "OpenSans-Regular";
+  font-size: 15px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+div.pricing div.list button {
+  background-color: #00878a;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-family: "OpenSans-Regular";
+  font-size: 15px;
+  height: 43px;
+  margin-top: 20px;
+  transition: 0.2s;
+  width: 100%;
+}
+
+div.pricing div.list button:hover {
+  background-color: #006b6d;
+  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.4);
+  transform: translate(0, -3px);
+}
+
+div.footer {
+  background: linear-gradient(to top right, #00878a, #02bdcc);
+  height: 60px;
+  position: relative;
+  width: 100%;
+}
+
+div.footer p {
+  color: white;
+  font-family: "OpenSans-Regular";
+  font-size: 15px;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translate(0, -50%);
+}
