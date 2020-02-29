@@ -2,7 +2,7 @@
 
 ## Screenshoot
 
-![Screenshoot banner](screenshoot/1.png)
-![Screenshoot about](screenshoot/2.png)
-![Screenshoot service](screenshoot/3.png)
-![Screenshoot price](screenshoot/4.png)
+![Screenshoot banner](screenshot/1.png)
+![Screenshoot about](screenshot/2.png)
+![Screenshoot service](screenshot/3.png)
+![Screenshoot price](screenshot/4.png)
