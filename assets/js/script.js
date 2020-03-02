@@ -1,11 +1,11 @@
-$(document).ready(function() {
-  $(document).scroll(function() {
-    let scroll = $(window).scrollTop();
+const navbar = document.querySelector("nav");
 
-    if (scroll > 220) {
-      $("nav").css("top", "0");
-    } else {
-      $("nav").css("top", "-100px");
-    }
-  });
-});
+window.onscroll = function() {
+  const scroll = document.documentElement.scrollTop;
+
+  if (scroll > 500) {
+    navbar.style.top = "0";
+  } else {
+    navbar.style.top = "-100px";
+  }
+};
